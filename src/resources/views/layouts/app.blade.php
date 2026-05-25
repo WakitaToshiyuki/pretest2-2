@@ -17,11 +17,13 @@
     <h1 class="">COACHTECH</h1>
     <form action="" class="">
     @csrf
-        <input type="text">
+      <input type="text" class="" placeholder="なにをお探しですか？">
     </form>
     <a href="">ログアウト</a>
     <a href="">マイページ</a>
-    <button>出品</button>
+    <a href="">
+      <button type="button">出品</button>
+    </a>
   </div>
 </header>
 <main>
