@@ -14,4 +14,6 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::get('/', [UserController::class, 'index']);
+Route::middleware('auth')->group(function(){
+    Route::get('/', [UserController::class, 'index']);
+});

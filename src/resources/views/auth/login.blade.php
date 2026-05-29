@@ -20,7 +20,7 @@
     <div class="layout">
         <h2>ログイン</h2>
         <table>
-            <form action="" method="POST">
+            <form action="/login" method="POST">
             @csrf
                 <tr class="">
                     <h4 class="">メールアドレス</h4>
@@ -39,7 +39,7 @@
                 </tr>
             </form>
             <tr class="">
-                <a href="">会員登録はこちら</a>
+                <a href="/register">会員登録はこちら</a>
             </tr>
         </table>
     </div>

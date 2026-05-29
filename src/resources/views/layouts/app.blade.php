@@ -13,18 +13,36 @@
 
 <body>
 <header>
-  <div class="header">
-    <h1 class="">COACHTECH</h1>
-    <form action="" class="">
-    @csrf
-      <input type="text" class="" placeholder="なにをお探しですか？">
-    </form>
-    <a href="">ログアウト</a>
-    <a href="">マイページ</a>
-    <a href="">
-      <button type="button">出品</button>
-    </a>
-  </div>
+  @if(Auth::check())
+    <div class="header">
+      <h1 class="">COACHTECH</h1>
+      <form action="" class="">
+      @csrf
+        <input type="text" class="" placeholder="なにをお探しですか？">
+      </form>
+      <form action="/logout" method="post">
+      @csrf
+        <button class="header-nav__button">ログアウト</button>
+      </form>
+      <a href="">マイページ</a>
+      <a href="">
+        <button type="button">出品</button>
+      </a>
+    </div>
+  @else
+    <div class="header">
+      <h1 class="">COACHTECH</h1>
+      <form action="" class="">
+      @csrf
+        <input type="text" class="" placeholder="なにをお探しですか？">
+      </form>
+      <a href="/login">ログイン</a>
+      <a href="">マイページ</a>
+      <a href="">
+        <button type="button">出品</button>
+      </a>
+    </div>
+  @endif
 </header>
 <main>
   @yield('content')
